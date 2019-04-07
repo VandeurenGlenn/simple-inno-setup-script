@@ -88,7 +88,7 @@ const transformAndValidateOptions = async options => {
     options.vbsPath = join(__dirname, 'templates', 'vbs.vbs');
   }
 
-  if (options.vbsPath) options.vbs = `Source: "${options.vbsPath}"; DestDir: "{pf}/${options.name}/${options.name}.vbs"; Flags: solidbreak`;
+  if (options.vbsPath) options.vbs = `Source: "${options.vbsPath}"; DestDir: "{pf}/${options.name}"; DestName: "${options.name}.vbs"; Flags: solidbreak`;
   else options.vbs = '';
 
   if (!options.signTool) options.signTool = '';
