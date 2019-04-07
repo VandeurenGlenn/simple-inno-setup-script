@@ -85,9 +85,11 @@ const transformAndValidateOptions = async options => {
   }
 
   if (options.hideTerminal && !options.vbsPath) {
-    const path = join(__dirname, 'templates', 'vbs.vbs');
-    options.vbs = `Source: "${path}"; DestDir: "{pf}/${options.name}/${options.name}.vbs"; Flags: solidbreak`;
+    options.vbsPath = join(__dirname, 'templates', 'vbs.vbs');
   }
+
+  if (options.vbsPath) options.vbs = `Source: "${options.vbsPath}"; DestDir: "{pf}/${options.name}/${options.name}.vbs"; Flags: solidbreak`;
+  else options.vbs = '';
 
   if (!options.signTool) options.signTool = '';
 
