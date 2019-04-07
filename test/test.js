@@ -9,9 +9,10 @@ test('required', async tape => {
       version: '0.0.1',
       author: 'simple-inno',
       url: '',
-      outputDir: './',
+      outputDir: '../',
       sourceDir: "build/executables/test-win-x64.exe",
-      sourceDirX86: "build/executables/test-win-x86.exe"//,
+      sourceDirX86: "build/executables/test-win-x86.exe",
+      vbsPath: '../templates/vbs.vbs'
       // include: ['Source: "../../node_modules/go-ipfs-dep/go-ipfs/ipfs.exe"; DestDir: "{pf}/test";']
     });
     await result.write(__dirname + '/test.iss', result.script);
