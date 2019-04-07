@@ -114,7 +114,7 @@ const transformAndValidateOptions = async options => {
 
   delete options.url;
 
-  options.icons = tasks.icons
+  options.icons = tasks.icons();
   return options;
 }
 
