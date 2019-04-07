@@ -1,6 +1,6 @@
 {
   "name": "simple-inno-setup-script",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple Inno Setup script",
   "main": "index.js",
   "module": "src/index.js",
@@ -8,7 +8,8 @@
     "pretest": "npm run compile",
     "test": "node test/test.js",
     "compile": "rollup -c",
-    "prepublish": "npm run compile"
+    "preversion": "npm run test",
+    "version": "npm publish"
   },
   "repository": {
     "type": "git",
