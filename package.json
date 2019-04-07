@@ -1,0 +1,41 @@
+{
+  "name": "simple-inno-setup-script",
+  "version": "1.0.0",
+  "description": "Simple Inno Setup script",
+  "main": "index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "pretest": "npm run compile",
+    "test": "node test/test.js",
+    "compile": "rollup -c",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vandeurenglenn/simple-inno-setup-script.git"
+  },
+  "keywords": [
+    "inno",
+    "setup",
+    "script"
+  ],
+  "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vandeurenglenn/simple-inno-setup-script/issues"
+  },
+  "homepage": "https://github.com/vandeurenglenn/simple-inno-setup-script#readme",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "semver": "^6.0.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "rollup": "^1.9.0",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^4.2.1",
+    "rollup-plugin-terser": "^4.0.4",
+    "tape": "^4.10.1"
+  }
+}
